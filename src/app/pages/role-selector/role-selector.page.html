@@ -1,0 +1,35 @@
+<ion-content scrollY="false">
+  <app-float-menu-button></app-float-menu-button>
+
+  <!-- shop card button -->
+	<ion-card [routerLink]="['/manage-items']">
+		<ion-card-header>
+			<ion-card-subtitle>Administrator</ion-card-subtitle>
+			<ion-card-title>Shop Controller</ion-card-title>
+		</ion-card-header>
+
+		<ion-card-content>
+      This button to access the shop owner login to the manager page to editing the products on the customer site
+		</ion-card-content>
+    <div class="img-wrapper">
+      <!-- image source: https://www.glazestock.com/image/qRZm6CIDi/free -->
+      <ion-img src="../../../assets/images/shop.png" alt="shop"></ion-img>
+    </div>
+	</ion-card>
+
+  <!-- customer card button -->
+	<ion-card [routerLink]="['/home']">
+		<ion-card-header>
+			<ion-card-subtitle>Customer user</ion-card-subtitle>
+			<ion-card-title>Customer</ion-card-title>
+		</ion-card-header>
+
+		<ion-card-content>
+      This button to access the customer UI. The customer will be able to see the list of products added by shop owner at Shop Controller side.
+		</ion-card-content>
+    <div class="img-wrapper">
+      <!-- image source: https://www.glazestock.com/image/xj_3gkQFD/free -->
+      <ion-img src="../../../assets/images/customer.png" alt="shop"></ion-img>
+    </div>
+	</ion-card>
+</ion-content>

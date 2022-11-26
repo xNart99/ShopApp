@@ -1,0 +1,43 @@
+<div class="ion-page">
+  <ion-header>
+    <!-- top bar -->
+    <ion-toolbar>
+      <ion-buttons slot="secondary">
+        <ion-button color="danger" (click)="dismissModal()">
+          Close
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="primary">
+        <ion-button color="success" (click)="saveProduct()">
+          {{ product?.id ? 'Update' : 'Add' }}
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- form -->
+
+  <ion-content>
+    <!-- image -->
+    <div class="image-container">
+      <div class="image-outer" id="preview-img">
+        <div class="image-picker" (click)="selectImage()">
+          <ion-icon name="camera"></ion-icon>
+        </div>
+      </div>
+    </div>
+
+    <form #form [formGroup]="productForm">
+      <ion-list>
+        <!-- title -->
+        <ion-input type="text" formControlName="title" placeholder="Title"></ion-input>
+        <!-- category -->
+        <ion-input type="text" formControlName="category" placeholder="Category"></ion-input>
+        <!-- price -->
+        <ion-input type="number" formControlName="price" placeholder="Price"></ion-input>
+        <!-- description -->
+        <ion-textarea formControlName="description" placeholder="Description"></ion-textarea>
+      </ion-list>
+    </form>
+  </ion-content>
+</div>

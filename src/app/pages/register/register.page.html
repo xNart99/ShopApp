@@ -1,0 +1,51 @@
+<ion-content>
+	<!-- float menu button -->
+  <app-float-menu-button></app-float-menu-button>
+
+	<!-- register container -->
+	<div class="register-wrapper">
+		<!-- app logo -->
+		<div class="app-logo">
+			<ion-icon name="heart-circle-outline"
+				color="red"
+			></ion-icon>
+		</div>
+		<!-- form register -->
+		<div class="form-register">
+			<form (ngSubmit)="onSubmit()"
+				[formGroup]="registerForm"
+			>
+				<ion-label>Register</ion-label>
+				<!-- email input -->
+				<ion-input placeholder="Enter your email"
+          formControlName="email"
+					type="email"
+				></ion-input>
+				<!-- password input -->
+				<ion-input placeholder="Enter your password"
+          formControlName="password"
+					type="password"
+				></ion-input>
+				<!-- confirm password -->
+				<ion-input placeholder="Confirm your password"
+          formControlName="confirmPassword"
+					type="password"
+				></ion-input>
+				<!-- button register -->
+				<ion-button expand="block"
+					color="dark"
+					fill="solid"
+          type="submit"
+				>
+					Register
+				</ion-button>
+			</form>
+			<!-- button login -->
+			<div class="form-login-login-btn">
+				<ion-label [routerLink]="['/login']">
+					Already have an account?
+				</ion-label>
+			</div>
+		</div>
+	</div>
+</ion-content>

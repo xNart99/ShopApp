@@ -1,0 +1,45 @@
+<app-header [title]="'Manager Item'"></app-header>
+
+<ion-content>
+  <!-- float add button -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button translucent="true" color="dark" (click)="openAddItemModal()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list>
+    <ion-card *ngFor="let product of usersProducts">
+      <ion-item-sliding>
+        <ion-item-options side="start" (click)="deleteProduct(product)">
+          <ion-item-option color="danger" expandable>
+            Delete
+          </ion-item-option>
+        </ion-item-options>
+
+        <ion-item>
+          <div class="img-wrapper" slot="start">
+            <ion-img [src]="imageService.getImage(product.urlImage)?.data"></ion-img>
+          </div>
+          <ion-card-content>
+            <ion-card-header>
+              <ion-card-subtitle>{{ product.category }}</ion-card-subtitle>
+              <ion-card-title>{{ product.title }}</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+              {{ product.description }}
+            </ion-card-content>
+          </ion-card-content>
+          <ion-label slot="end"><strong>{{ product.price| currency }}</strong></ion-label>
+        </ion-item>
+
+        <ion-item-options side="end" (click)="openEditItemModal(product)">
+          <ion-item-option color="tertiary" expandable>
+            Edit
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-card>
+  </ion-list>
+</ion-content>

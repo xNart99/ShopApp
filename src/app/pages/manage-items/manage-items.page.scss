@@ -1,0 +1,26 @@
+ion-item {
+  --border-color: #fff;
+}
+
+.img-wrapper {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  img {
+    object-fit: contain;
+  }
+}
+
+ion-card-content {
+  ion-card-header {
+    padding: 0;
+    ion-card-title {
+      font-size: 1.25rem;
+    }
+  }
+  ion-card-content {
+    font-size: 0.75rem;
+    padding: 2px 0;
+  }
+}

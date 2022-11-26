@@ -1,0 +1,13 @@
+ion-content {
+  --padding-top: 10%;
+}
+ion-card {
+  height: 43%;
+}
+.img-wrapper {
+  height: 65%;
+  text-align: center;
+  img {
+    height: inherit;
+  }
+}

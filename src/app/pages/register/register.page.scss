@@ -1,0 +1,48 @@
+ion-content {
+
+  .register-wrapper {
+    height: 100%;
+
+    .app-logo {
+      text-align: center;
+      height: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      ion-icon {
+        font-size: 128px;
+      }
+    }
+    
+    .form-register {
+      padding: 24px;
+
+      ion-input {
+        height: 50px;
+        border: 2px solid #c4c4c4;
+        border-radius: 5px;
+        margin: 10px 0;
+        --padding-start: 20px;
+      }
+
+      ion-label:first-child {
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      ion-label:last-child {
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      ion-button {
+        margin-bottom: 20px;
+      }
+
+      .form-login-login-btn {
+        text-align: center;
+      }
+    }
+  }
+}
